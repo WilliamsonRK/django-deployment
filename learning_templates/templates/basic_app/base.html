@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base Html</title>
+</head>
+<style>
+    p{
+        font-size: 1.2rem;
+        color:#369;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a class='navbar-brand' href="{%url 'index' %}">BRAND</a></li>
+                <li><a class='navbar-link' href="{% url 'admin:index' %}">ADMIN</a></li>
+                <li><a class='navbar-link' href="{% url 'basic_app:other' %}">OTHER</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block body_block %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>
